@@ -1,0 +1,422 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6f0ff; /* baby blue background */
+    color: #003366; /* dark blue text for contrast */
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #cce0ff; /* lighter baby blue */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-color: #b3d1ff; /* slightly darker baby blue on scroll */
+}
+
+.logo img {
+    height: 50px;
+    position: absolute;
+    left: 20px;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #003366; /* dark blue */
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #99bbff; /* medium baby blue */
+    color: white;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #cce0ff; /* lighter baby blue */
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1001;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content li a {
+    padding: 10px 15px;
+    color: #003366;
+}
+
+.dropdown-content li a:hover {
+    background-color: #99bbff;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Carousel styles */
+.carousel-container {
+    margin-top: 80px; /* to avoid navbar overlap */
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.zoom-in {
+    animation: zoomIn 20s ease-in-out infinite alternate;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Overlay for bible quote */
+.overlay {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    padding: 15px 20px;
+    border-radius: 5px;
+    max-width: 60%;
+    font-size: 1.2em;
+}
+
+/* Carousel buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(204, 224, 255, 0.7); /* baby blue transparent */
+    border: none;
+    font-size: 2em;
+    padding: 5px 10px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    z-index: 1002;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #99bbff; /* medium baby blue */
+    color: white;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Church details section */
+.church-details {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: #003366;
+}
+
+.church-details h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.church-details p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #003366;
+}
+
+/* Footer styles */
+footer {
+    background-color: #003366; /* dark blue */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links li {
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-color: #fff;
+}
+
+.logo img {
+    height: 50px;
+    position: absolute;
+    left: 20px;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1001;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content li a {
+    padding: 10px 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Carousel styles */
+.carousel-container {
+    margin-top: 80px; /* to avoid navbar overlap */
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.zoom-in {
+    animation: zoomIn 20s ease-in-out infinite alternate;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Overlay for bible quote */
+.overlay {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    padding: 15px 20px;
+    border-radius: 5px;
+    max-width: 60%;
+    font-size: 1.2em;
+}
+
+/* Carousel buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.7);
+    border: none;
+    font-size: 2em;
+    padding: 5px 10px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    z-index: 1002;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(255,255,255,1);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Church details section */
+.church-details {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.church-details h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.church-details p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Footer styles */
+footer {
+    background-color: #222;
+    color: #eee;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links li {
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
